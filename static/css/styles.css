@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'cody';
+    src: url('../../font/cody.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: black;
+    color: white;
+    margin: 0;
+    font-family: 'cody', sans-serif;
+    padding-bottom: 75px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.header {
+    padding: 5px 5px 0.5px;
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to bottom, black 0%, black 60%, rgba(0,0,0, 0.5) 80%, transparent 100%);
+}
+
+.navigation-item {
+    list-style: none;
+    text-align: center;
+}
+
+.navigation {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-auto-columns: 100px;
+    grid-auto-flow: column;
+    justify-content: space-around;
+} 
+
+.featured {
+    width: 100%;
+    height: 100vh;
+    margin-top: -90px;     
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-video {
+    width: 1600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.featured-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, black 0%, transparent 100%);
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tag::before {
+    display: inline-block;
+    content: '•';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 15px;
+    z-index: 10;
+}
+
+.tag:first-child::before {
+    display: none;
+}
+
+.featured-actions {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.button, .button-secondary {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-family: 'cody', sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    background: white;
+    color: black;
+    align-items: center;
+    padding: 5px 1em 5px .5em;
+    border-radius: 3px;
+}
+
+.button::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.button-secondary {
+    background: none;
+    color: white;
+    font-size: 1.1em;
+    min-width: 100px;
+    flex-direction: column;
+}
+
+.button-secondary::before {
+    display: block;
+    content: '';
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.icon-plus::before {
+    background: url('../../icons/plus.svg');
+}
+
+.icon-play::before {
+    background: url('../../icons/play.svg');
+}
+
+.icon-info::before {
+    background: url('../../icons/info.svg');
+}
+
+.list-content {
+    white-space: nowrap;
+    overflow-x: auto;
+    cursor: grab;
+}
+
+.list-content::-webkit-scrollbar {
+    display: none;
+}
+
+.list-content:active {
+    cursor: grabbing;
+}
+
+.list-item {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.list-item:first-child {
+    margin: 0;
+}
+
+.list-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    position: relative;
+}
+
+.list-item img {
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+    display: block;
+}
+
+.list-item:hover img {
+    transform: scale(1.1);
+}
+
+.list {
+    padding: 0 1em;
+}
+
+.list-title {
+    margin-left: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1em 0 0;
+}
+
+.tab-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    color: gray;
+}
+
+.tab-list a {
+    color: gray;
+}
+
+.tab-item {
+    text-align: center;
+}
+
+.tab-item svg {
+    display: block;
+    margin: auto;
+}
+
+.tab-item path {
+    fill: gray;
+    transition: fill 0.3s ease;
+}
+
+.tab-item:hover path {
+    fill: white;
+}
+
+.tab-item:hover a {
+    color: white;
+}
+
+
+.header-1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    align-items: center;
+    padding: 10px 10px;
+    z-index: 10;
+}
+
+.navigation-1 {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-auto-columns: 100px;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+
+.navigation-1-item a {
+    list-style: none;
+    text-align: center;
+}
+
+.navigation-1-item a:hover {
+    color: #ff6b6b;
+}
+
+.info-1 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.info-video-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 5;
+    pointer-events: none;
+}
+
+
+.info-page-1 {
+    padding: 50px 20px;
+    background-color: #111;
+}
+
+.info-container-1 {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.info-text-1 h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+}
+
+.info-text-1 p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.list-7 {
+    padding: 40px 20px;
+    background-color: #000;
+}
+
+.list-title-1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+.list-content-2{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.list-item {
+    flex-shrink: 0;
+}
+
+.list-item img {
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.list-item img:hover {
+    transform: scale(1.05);
+}
+
+.list-content::-webkit-scrollbar {
+    height: 8px;
+}
+
+.list-content::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.list-content::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
